@@ -1,0 +1,16 @@
+{
+  "name": "ROCOCO — Studio d'ongles",
+  "short_name": "ROCOCO",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#21621c",
+  "icons": [
+    {
+      "src": "assets/rococo-emblem.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

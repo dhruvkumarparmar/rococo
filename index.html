@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ROCOCO — Studio d'ongles moderne et raffiné au Québec. Semi-permanent, extensions gel, nail art, gainage et forfaits.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="ROCOCO">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:title" content="ROCOCO — Studio d'ongles">
+  <meta property="og:description" content="Raffinement, élégance et nail art moderne au Québec.">
+  <meta property="og:image" content="assets/rococo-emblem.png">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ROCOCO — Studio d'ongles">
+  <meta name="twitter:description" content="Raffinement, élégance et nail art moderne au Québec.">
+  <meta name="twitter:image" content="assets/rococo-emblem.png">
+  <meta name="theme-color" content="#21621c">
+  <link rel="icon" type="image/png" href="assets/rococo-emblem.png">
+  <link rel="apple-touch-icon" href="assets/rococo-emblem.png">
+  <link rel="manifest" href="site.webmanifest">
+  <title>ROCOCO — Studio d'ongles</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "ROCOCO",
+  "description": "Studio d'ongles moderne et raffiné au Québec.",
+  "email": "onglesrococo@gmail.com",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Québec, Canada"
+  },
+  "priceRange": "$$",
+  "currenciesAccepted": "CAD"
+}
+  </script>
+</head>
+<body class="js-loading">
+<a class="skip-link" href="#mainContent">Aller au contenu</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<canvas id="rococoCanvas" class="rococo-canvas" aria-hidden="true"></canvas>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<div class="cursor-orb" id="cursorOrb" aria-hidden="true"></div>
+
+<div class="topline">
+  <div class="container d-flex justify-content-between align-items-center gap-3">
+    <span>ROCOCO · ONGLERIE MODERNE</span>
+    <span class="d-none d-md-inline">-25% NOUVELLES CLIENTES · 8E MANUCURE OFFERTE</span>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg rococo-nav sticky-top">
+  <div class="container">
+    <a href="#accueil" class="navbar-brand logo-wrap brand-lockup-nav" aria-label="ROCOCO accueil">
+      <span class="nav-emblem-shell">
+        <span class="nav-emblem-halo"></span>
+        <img class="brand-emblem brand-emblem-nav" src="assets/rococo-emblem.png" alt="">
+      </span>
+      <span class="brand-lockup-text">
+        <span class="logo">ROCOCO</span>
+        <small>ONGLES</small>
+      </span>
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#tarifs">Tarifs</a></li>
+        <li><a class="nav-link" href="#work">Réalisations</a></li>
+        <li><a class="nav-link" href="#fidelite">Fidélité</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="ms-lg-2 mt-3 mt-lg-0">
+          <a class="btn pill-btn magnetic" href="#reservation">Réserver <span>↗</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="mainContent">
+<header id="accueil" class="hero">
+  <div class="grain"></div>
+  <div class="hero-line line-a"></div>
+  <div class="hero-line line-b"></div>
+
+  <div class="container">
+    <div class="row align-items-center g-5 min-vh-90">
+      <div class="col-lg-6">
+        <div class="hero-copy-block reveal">
+          <div class="hero-brand-signature">
+            <img src="assets/rococo-emblem.png" class="hero-emblem" alt="Emblème ROCOCO">
+            <div>
+              <div class="mini-label">ROCOCO · ONGLERIE</div>
+              <div class="brand-tagline">RAFFINEMENT &amp; ÉLÉGANCE</div>
+            </div>
+          </div>
+          <h1><span class="hero-word">Bold</span> <span class="hero-word">nails.</span><br><em class="hero-script">Soft luxury.</em></h1>
+          <p class="lead-copy">
+            ROCOCO transforme chaque rendez-vous en expérience esthétique :
+            lignes précises, détails raffinés, palettes soignées et finitions élégantes.
+          </p>
+
+          <div class="d-flex flex-wrap gap-3 align-items-center hero-cta">
+            <a href="#reservation" class="btn pill-btn btn-lg magnetic">Réserver ma séance</a>
+            <a href="#work" class="ghost-link magnetic magnetic-soft">Voir les réalisations <span>↘</span></a>
+          </div>
+
+          <div class="hero-badges">
+            <span>SEMI-PERMANENT</span>
+            <span>EXTENSIONS GEL</span>
+            <span>NAIL ART</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="hero-visual reveal">
+          <div class="shape shape-pink parallax-layer" data-depth="18"></div>
+          <div class="shape shape-green parallax-layer" data-depth="-12"></div>
+          <div class="polish-drop drop-one parallax-layer" data-depth="30"></div>
+          <div class="polish-drop drop-two parallax-layer" data-depth="-24"></div>
+          <div class="polish-drop drop-three parallax-layer" data-depth="12"></div>
+          <div class="editorial-frame logo-stage parallax-layer" data-depth="8">
+            <div class="logo-stage-ring ring-1"></div>
+            <div class="logo-stage-ring ring-2"></div>
+            <div class="logo-stage-ring ring-3"></div>
+            <div class="logo-stage-inner">
+              <span class="logo-stage-kicker">ROCOCO · SIGNATURE</span>
+              <img src="assets/rococo-emblem.png" class="hero-logo-art" alt="Emblème ROCOCO">
+              <div class="hero-logo-word">ROCOCO</div>
+              <div class="hero-logo-sub"><span></span> ONGLES <span></span></div>
+            </div>
+            <span class="spark spark-1">✦</span>
+            <span class="spark spark-2">✦</span>
+            <span class="spark spark-3">✦</span>
+          </div>
+          <div class="floating-tag tag-one parallax-layer" data-depth="22">SIGNATURE<br>NAILS</div>
+          <div class="floating-tag tag-two parallax-layer" data-depth="-18">✦</div>
+          
+          <div class="nail-orbit parallax-layer" data-depth="-8" aria-hidden="true">
+            <div class="nail-orbit-ring ring-outer">
+              <span class="orbit-word word-one">ROCOCO</span>
+              <span class="orbit-word word-two">NAIL ART</span>
+              <span class="orbit-word word-three">MONTRÉAL</span>
+              <span class="orbit-star star-a">✦</span>
+              <span class="orbit-star star-b">✦</span>
+            </div>
+
+            <div class="nail-orbit-ring ring-middle"></div>
+            <div class="nail-orbit-ring ring-inner"></div>
+
+            <div class="hand-orbit-art">
+              <div class="palm-shape"></div>
+
+              <span class="finger-shape finger-thumb">
+                <i class="finger-nail nail-thumb"></i>
+              </span>
+              <span class="finger-shape finger-index">
+                <i class="finger-nail nail-index"></i>
+              </span>
+              <span class="finger-shape finger-middle">
+                <i class="finger-nail nail-middle"></i>
+              </span>
+              <span class="finger-shape finger-ring">
+                <i class="finger-nail nail-ring"></i>
+              </span>
+              <span class="finger-shape finger-pinky">
+                <i class="finger-nail nail-pinky"></i>
+              </span>
+
+              <div class="hand-highlight hand-highlight-a"></div>
+              <div class="hand-highlight hand-highlight-b"></div>
+            </div>
+
+            <div class="orbit-center orbit-center-premium">
+              <span class="orbit-center-small">THE ROCOCO SET</span>
+              <strong>NAILS</strong>
+              <em>signature beauty</em>
+            </div>
+
+            <div class="orbit-polish-drop drop-a"></div>
+            <div class="orbit-polish-drop drop-b"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="marquee-band">
+  <div class="marquee-track">
+    <span>ROCOCO</span><b>✦</b><span>NAIL ART</span><b>✦</b><span>GEL</span><b>✦</b><span>SEMI-PERMANENT</span><b>✦</b>
+    <span>ROCOCO</span><b>✦</b><span>NAIL ART</span><b>✦</b><span>GEL</span><b>✦</b><span>SEMI-PERMANENT</span><b>✦</b>
+  </div>
+</section>
+
+<section class="brand-signature-section section-space-sm">
+  <div class="container">
+    <div class="brand-signature-panel">
+      <div class="brand-signature-emblem">
+        <img src="assets/rococo-emblem.png" alt="Emblème botanique ROCOCO">
+      </div>
+      <div class="brand-signature-copy">
+        <p class="mini-label">L'IDENTITÉ ROCOCO</p>
+        <div class="brand-name-display">ROCOCO</div>
+        <div class="brand-ongles-line"><span></span> ONGLES <span></span></div>
+        <div class="brand-elegance-line">RAFFINEMENT &amp; ÉLÉGANCE</div>
+        <p>Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.</p>
+      </div>
+      
+      <div class="brand-team" aria-label="Équipe ROCOCO">
+        <article class="brand-team-card">
+          <div class="brand-team-photo-wrap">
+            <img
+              src="assets/teamPhoto1.jpg"
+              alt="Portrait de membre de l'équipe ROCOCO"
+              class="brand-team-photo"
+              loading="lazy">
+            <span class="brand-team-number">01</span><small class="team-photo-note">Founder & CEO</small>
+          </div>
+          <div class="brand-team-info">
+            <strong>Isabelle Pothier</strong>
+            <span>Nail Artist</span>
+          </div>
+        </article>
+
+        <!-- <article class="brand-team-card">
+          <div class="brand-team-photo-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=500&q=85"
+              alt="Portrait de membre de l'équipe ROCOCO"
+              class="brand-team-photo"
+              loading="lazy">
+            <span class="brand-team-number">02</span><small class="team-photo-note">PHOTO ILLUSTRATIVE</small>
+          </div>
+          <div class="brand-team-info">
+            <strong>Équipe ROCOCO</strong>
+            <span>Nail Artist</span>
+          </div>
+        </article> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="logo-reveal-section" id="signature">
+  <div class="logo-reveal-bg-word" aria-hidden="true">ROCOCO</div>
+  <div class="container">
+    <div class="logo-reveal-layout">
+      <div class="logo-reveal-copy">
+        <p class="mini-label">THE ROCOCO SIGNATURE</p>
+        <h2>More than a logo.<br><em>A visual signature.</em></h2>
+        <p>The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.</p>
+      </div>
+      <div class="logo-reveal-art" id="logoRevealArt">
+        <div class="reveal-circle reveal-circle-a"></div>
+        <div class="reveal-circle reveal-circle-b"></div>
+        <img src="assets/rococo-emblem.png" alt="Logo ROCOCO" class="reveal-emblem">
+        <div class="reveal-wordmark">ROCOCO</div>
+        <div class="reveal-tagline">RAFFINEMENT &amp; ÉLÉGANCE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-space services">
+  <div class="container">
+    <div class="row align-items-end mb-5 g-4">
+      <div class="col-lg-8">
+        <p class="mini-label">NOS ESSENTIELS</p>
+        <h2 class="section-title">Un service précis.<br><em>Une esthétique assumée.</em></h2>
+      </div>
+      <div class="col-lg-4">
+        <p class="section-copy">Chaque prestation est pensée pour créer une finition nette, moderne et harmonieuse, adaptée à votre style.</p>
+      </div>
+    </div>
+
+    <div class="bento-grid">
+      <article class="bento-card bento-large">
+        <span class="bento-index">01</span>
+        <div>
+          <p class="mini-label">CLASSIQUE MODERNE</p>
+          <h3>Semi-permanent</h3>
+          <p>Couleur uniforme, brillance longue durée et finition impeccable.</p>
+          <a href="#tarifs">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+      <article class="bento-card dark">
+        <span class="bento-index">02</span>
+        <div>
+          <p class="mini-label">STRUCTURE</p>
+          <h3>Extensions gel</h3>
+          <p>Longueur, forme et architecture personnalisées.</p>
+          <a href="#tarifs">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+      <article class="bento-card pink">
+        <span class="bento-index">03</span>
+        <div>
+          <p class="mini-label">CRÉATIF</p>
+          <h3>Nail art</h3>
+          <p>Minimal, French, Babyboomer ou compositions plus créatives.</p>
+          <a href="#tarifs">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+      <article class="bento-card olive">
+        <span class="bento-index">04</span>
+        <div>
+          <p class="mini-label">COMBINAISONS</p>
+          <h3>Forfaits</h3>
+          <p>Des options pensées pour maximiser tenue, confort et style.</p>
+          <a href="#tarifs">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs" class="section-space pricing">
+  <div class="container">
+    <div class="pricing-head d-flex flex-column flex-lg-row justify-content-between gap-4 align-items-lg-end">
+      <div>
+        <p class="mini-label">MENU ROCOCO</p>
+        <h2 class="section-title">Tarifs en <em>CAD.</em></h2>
+      </div>
+      <p>Services personnalisables selon la longueur, la forme et le niveau de détail.</p>
+    </div>
+
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="semi">Semi-permanent</button>
+      <button class="filter-btn" data-filter="gel">Gel</button>
+      <button class="filter-btn" data-filter="art">Nail art</button>
+      <button class="filter-btn" data-filter="forfait">Forfaits</button>
+    </div>
+
+    <div class="price-list">
+      <div class="price-row price-item" data-category="semi"><span>Pose semi-permanent</span><i></i><strong>30 $</strong></div>
+      <div class="price-row price-item" data-category="semi"><span>Dépose semi-permanent</span><i></i><strong>10 $</strong></div>
+      <div class="price-row price-item" data-category="semi"><span>Dépose & pose</span><i></i><strong>35 $</strong></div>
+      <div class="price-row price-item" data-category="gel"><span>Pose d'extensions en gel</span><i></i><strong>45 $</strong></div>
+      <div class="price-row price-item" data-category="gel"><span>Gainage</span><i></i><strong>35 $</strong></div>
+      <div class="price-row price-item" data-category="gel"><span>Remplissage 4 semaines</span><i></i><strong>40 $</strong></div>
+      <div class="price-row price-item" data-category="gel"><span>Dépose gel</span><i></i><strong>20 $</strong></div>
+      <div class="price-row price-item" data-category="art"><span>Nail art · par ongle</span><i></i><strong>3 $</strong></div>
+      <div class="price-row price-item" data-category="art"><span>French ou Babyboomer</span><i></i><strong>10 $</strong></div>
+      <div class="price-row price-item" data-category="art"><span>Nail art complet</span><i></i><strong>Sur devis</strong></div>
+      <div class="price-row price-item" data-category="forfait"><span>Gainage + semi-permanent</span><i></i><strong>40 $</strong></div>
+      <div class="price-row price-item" data-category="forfait"><span>Pose XXL</span><i></i><strong>+15 $</strong></div>
+      <div class="price-row price-item" data-category="forfait"><span>Pose semi-permanent + gainage</span><i></i><strong>45 $</strong></div>
+    </div>
+
+    <div class="promo-card">
+      <div>
+        <p class="mini-label">OFFRE DÉCOUVERTE</p>
+        <h3>-25% pour votre première visite.</h3>
+      </div>
+      <a href="#reservation" class="round-arrow magnetic" aria-label="Réserver">↗</a>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section-space work">
+  <div class="container-fluid px-lg-5">
+    <div class="row align-items-end mb-5">
+      <div class="col-lg-7">
+        <p class="mini-label">CLIENT WORK / INSPIRATION</p>
+        <h2 class="section-title">Des détails qui<br><em>se remarquent.</em></h2>
+      </div>
+      <div class="col-lg-5">
+        <p class="section-copy">Cette galerie est prête à accueillir vos vraies photos clientes. Pour l'instant, elle utilise des visuels de démonstration externes.</p>
+      </div>
+    </div>
+
+    <div class="editorial-gallery">
+      <figure class="work-card work-a">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=85" alt="Manucure rose" loading="lazy">
+        <figcaption><span>01</span><strong>Nude / Clean</strong></figcaption>
+      </figure>
+      <figure class="work-card work-b">
+        <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=1000&q=85" alt="Nail art élégant" loading="lazy">
+        <figcaption><span>02</span><strong>Minimal Art</strong></figcaption>
+      </figure>
+      <figure class="work-card work-c">
+        <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1000&q=85" alt="Ongles colorés" loading="lazy">
+        <figcaption><span>03</span><strong>Color Story</strong></figcaption>
+      </figure>
+      <figure class="work-card work-d">
+        <img src="https://images.unsplash.com/photo-1610992015762-45c2f1c8f6f6?auto=format&fit=crop&w=1000&q=85" alt="Manucure détaillée" loading="lazy">
+        <figcaption><span>04</span><strong>Signature</strong></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="kinetic-section" aria-label="ROCOCO signature">
+  <div class="kinetic-sticky">
+    <div class="kinetic-glow"></div>
+    <div class="container position-relative">
+      <p class="mini-label text-center">THE ROCOCO EFFECT</p>
+      <div class="kinetic-copy" id="kineticCopy">
+        <span>YOUR</span>
+        <span>NAILS</span>
+        <em>but</em>
+        <span>BOLDER.</span>
+      </div>
+      <div class="liquid-nail" aria-hidden="true">
+        <div class="liquid-shine"></div>
+      </div>
+      <p class="kinetic-caption">Une signature pensée pour être remarquée sans jamais perdre son élégance.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="fidelite" class="section-space loyalty loyalty-gift-section">
+  <div class="loyalty-gift-bg-word" aria-hidden="true">FIDÉLITÉ</div>
+
+  <div class="container">
+    <div class="loyalty-gift-shell">
+      <img src="assets/rococo-emblem.png" class="loyalty-watermark" alt="" aria-hidden="true">
+
+      <div class="loyalty-gift-copy">
+        <p class="mini-label">FIDÉLITÉ ROCOCO</p>
+
+        <h2>
+          Votre 8e manucure.<br>
+          <em>Notre cadeau.</em>
+        </h2>
+
+        <p class="loyalty-intro">
+          Parce que votre fidélité mérite aussi son moment ROCOCO.
+          Cumulez vos visites et profitez de votre récompense lors de votre huitième manucure.
+        </p>
+
+        <div class="loyalty-gift-note">
+          <span class="gift-note-number">7</span>
+          <span class="gift-note-copy">
+            <strong>visites.</strong>
+            <small>La prochaine est pour nous. ✦</small>
+          </span>
+        </div>
+      </div>
+
+      <div class="loyalty-gift-visual" id="loyaltyGiftVisual">
+        <div class="gift-orbit gift-orbit-one"></div>
+        <div class="gift-orbit gift-orbit-two"></div>
+
+        <div class="gift-stamps">
+          <span class="visit-stamp" data-visit="01">01</span>
+          <span class="visit-stamp" data-visit="02">02</span>
+          <span class="visit-stamp" data-visit="03">03</span>
+          <span class="visit-stamp" data-visit="04">04</span>
+          <span class="visit-stamp" data-visit="05">05</span>
+          <span class="visit-stamp" data-visit="06">06</span>
+          <span class="visit-stamp" data-visit="07">07</span>
+        </div>
+
+        <div class="reward-wrap magnetic" id="rewardWrap">
+          <span class="reward-spark reward-spark-a">✦</span>
+          <span class="reward-spark reward-spark-b">✦</span>
+          <span class="reward-spark reward-spark-c">✦</span>
+
+          <div class="reward-card">
+            <div class="reward-card-ring"></div>
+            <span class="reward-number">08</span>
+            <strong>OFFERTE</strong>
+            <small>MANUCURE ROCOCO</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="brand-promises">
+  <div class="container">
+    <div class="brand-promise-grid">
+      <article>
+        <div class="promise-icon">❧</div>
+        <div><strong>PRODUITS</strong><span>De haute qualité</span></div>
+      </article>
+      <article>
+        <div class="promise-icon">◇</div>
+        <div><strong>HYGIÈNE</strong><span>Irréprochable</span></div>
+      </article>
+      <article>
+        <div class="promise-icon">✦</div>
+        <div><strong>TECHNICIENNES</strong><span>Expertes</span></div>
+      </article>
+      <article>
+        <div class="promise-icon">♡</div>
+        <div><strong>EXPÉRIENCE</strong><span>Personnalisée</span></div>
+      </article>
+      <article>
+        <div class="promise-icon">▱</div>
+        <div><strong>RÉSULTATS</strong><span>Durables</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="compact-reviews-section" id="avis">
+  <div class="container">
+    <div class="compact-review-head">
+      <div>
+        <p class="mini-label">MOTS DE NOS CLIENTES</p>
+        <h2>Modern. <em>Personal.</em> ROCOCO.</h2>
+      </div>
+      <div class="compact-review-meta">
+        <span class="compact-stars">★★★★★</span>
+        <small>EXPÉRIENCE ROCOCO</small>
+        <span class="review-demo-note">Exemples de présentation — à remplacer par des avis vérifiés.</span>
+      </div>
+    </div>
+
+    <div class="compact-review-slider" id="compactReviewSlider">
+      <article class="compact-review-card">
+        <div class="compact-review-top">
+          <span>★★★★★</span>
+          <small>SEMI-PERMANENT</small>
+        </div>
+        <p>“Une finition propre, élégante et exactement comme je l’imaginais.”</p>
+        <footer><b>A</b><span>Cliente ROCOCO</span></footer>
+      </article>
+
+      <article class="compact-review-card">
+        <div class="compact-review-top">
+          <span>★★★★★</span>
+          <small>EXTENSIONS GEL</small>
+        </div>
+        <p>“J’adore l’attention portée aux détails. Le résultat est magnifique.”</p>
+        <footer><b>S</b><span>Cliente ROCOCO</span></footer>
+      </article>
+
+      <article class="compact-review-card">
+        <div class="compact-review-top">
+          <span>★★★★★</span>
+          <small>NAIL ART</small>
+        </div>
+        <p>“Mon inspiration a été adaptée parfaitement à mon style.”</p>
+        <footer><b>C</b><span>Cliente ROCOCO</span></footer>
+      </article>
+
+      <article class="compact-review-card">
+        <div class="compact-review-top">
+          <span>★★★★★</span>
+          <small>GAINAGE</small>
+        </div>
+        <p>“Une expérience douce, professionnelle et une finition impeccable.”</p>
+        <footer><b>N</b><span>Cliente ROCOCO</span></footer>
+      </article>
+    </div>
+
+    <div class="compact-review-controls">
+      <button type="button" id="reviewPrev" aria-label="Avis précédent">←</button>
+      <div class="compact-review-dots" id="reviewDots"></div>
+      <button type="button" id="reviewNext" aria-label="Avis suivant">→</button>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="rococo-divider" aria-hidden="true">
+  <span></span><b>✦</b><span></span>
+</div>
+
+<section id="reservation" class="reservation">
+  <div class="container">
+    <div class="reservation-shell">
+      <img src="assets/rococo-emblem.png" class="reservation-watermark" alt="" aria-hidden="true">
+      <div class="reservation-info">
+        <p class="mini-label">BOOK YOUR SET</p>
+        <h2>Prête pour votre<br><em>prochain look?</em></h2>
+        <p>Envoyez votre demande et indiquez le service, la date souhaitée et le style recherché.</p>
+
+        <div class="contact-stack">
+          <a href="mailto:onglesrococo@gmail.com"><span>EMAIL</span> onglesrococo@gmail.com</a>
+          <a href="#contact"><span>ZONE</span> Québec · Canada</a>
+        </div>
+      </div>
+
+      <form id="bookingForm" class="modern-form">
+        <div class="field">
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div class="field">
+          <label for="email">Courriel</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div class="field">
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Choisir un service</option>
+            <option>Pose semi-permanent — 30 $</option>
+            <option>Dépose & pose — 35 $</option>
+            <option>Extensions gel — 45 $</option>
+            <option>Gainage — 35 $</option>
+            <option>Nail art</option>
+            <option>Forfait</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="date">Date souhaitée</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+        <div class="field full">
+          <label for="message">Détails / inspiration</label>
+          <textarea id="message" name="message" rows="4" placeholder="Couleur, longueur, design, disponibilité…"></textarea>
+        </div>
+        <div class="field full">
+          <button class="btn pill-btn w-100" type="submit">Envoyer ma demande <span>↗</span></button>
+          <p id="formStatus" class="form-status"></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact" class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand-lockup">
+        <img src="assets/rococo-emblem.png" alt="" class="footer-emblem">
+        <div>
+          <a href="#accueil" class="footer-logo">ROCOCO</a>
+          <p>ONGLES · RAFFINEMENT &amp; ÉLÉGANCE</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#work">Réalisations</a>
+        <a href="#reservation">Réserver</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> ROCOCO</span>
+      <span>Québec · Canada</span>
+    </div>
+  </div>
+</footer>
+
+<a href="#reservation" class="mobile-booking-cta" aria-label="Prendre rendez-vous">
+  <span>Réserver</span>
+  <b>↗</b>
+</a>
+
+<button id="backToTop" class="back-top" aria-label="Retour en haut">↑</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
