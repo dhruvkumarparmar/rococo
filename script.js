@@ -1,5 +1,498 @@
 "use strict";
+
+
+// =========================================================
+// ROCOCO BILINGUAL SYSTEM — FR / EN
+// Added directly to the user's existing project.
+// =========================================================
+const ROCOCO_I18N = {
+  fr: {
+  "Aller au contenu": "Aller au contenu",
+  "ROCOCO · ONGLERIE MODERNE": "ROCOCO · ONGLERIE MODERNE",
+  "-25% NOUVELLES CLIENTES · 8E MANUCURE OFFERTE": "-25% NOUVELLES CLIENTES · 8E MANUCURE OFFERTE",
+  "ONGLES": "ONGLES",
+  "Services": "Services",
+  "Tarifs": "Tarifs",
+  "Réalisations": "Réalisations",
+  "Fidélité": "Fidélité",
+  "Contact": "Contact",
+  "Réserver": "Réserver",
+  "ROCOCO · ONGLERIE": "ROCOCO · ONGLERIE",
+  "RAFFINEMENT & ÉLÉGANCE": "RAFFINEMENT & ÉLÉGANCE",
+  "Bold": "Des",
+  "nails.": "ongles audacieux.",
+  "Soft luxury.": "Une élégance douce.",
+  "ROCOCO transforme chaque rendez-vous en expérience esthétique : lignes précises, détails raffinés, palettes soignées et finitions élégantes.": "ROCOCO transforme chaque rendez-vous en expérience esthétique : lignes précises, détails raffinés, palettes soignées et finitions élégantes.",
+  "Réserver ma séance": "Réserver ma séance",
+  "Voir les réalisations": "Voir les réalisations",
+  "SEMI-PERMANENT": "SEMI-PERMANENT",
+  "EXTENSIONS GEL": "EXTENSIONS GEL",
+  "NAIL ART": "NAIL ART",
+  "ROCOCO · SIGNATURE": "ROCOCO · SIGNATURE",
+  "SIGNATURE": "SIGNATURE",
+  "NAILS": "ONGLES",
+  "THE ROCOCO SET": "LA POSE ROCOCO",
+  "signature beauty": "beauté signature",
+  "MONTRÉAL": "MONTRÉAL",
+  "GEL": "GEL",
+  "L'IDENTITÉ ROCOCO": "L’IDENTITÉ ROCOCO",
+  "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.": "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.",
+  "Founder & CEO": "FONDATRICE & CEO",
+  "Nail Artist": "Artiste ongulaire",
+  "THE ROCOCO SIGNATURE": "LA SIGNATURE ROCOCO",
+  "More than a logo.": "Plus qu’un logo.",
+  "A visual signature.": "Une signature visuelle.",
+  "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.": "L’emblème ROCOCO devient une partie intégrante de l’expérience — il se révèle par le mouvement, la lumière et les détails superposés au fil de votre visite.",
+  "NOS ESSENTIELS": "NOS ESSENTIELS",
+  "Un service précis.": "Un service précis.",
+  "Une esthétique assumée.": "Une esthétique assumée.",
+  "Chaque prestation est pensée pour créer une finition nette, moderne et harmonieuse, adaptée à votre style.": "Chaque prestation est pensée pour créer une finition nette, moderne et harmonieuse, adaptée à votre style.",
+  "CLASSIQUE MODERNE": "CLASSIQUE MODERNE",
+  "Semi-permanent": "Semi-permanent",
+  "Couleur uniforme, brillance longue durée et finition impeccable.": "Couleur uniforme, brillance longue durée et finition impeccable.",
+  "Découvrir": "Découvrir",
+  "STRUCTURE": "STRUCTURE",
+  "Extensions gel": "Extensions gel",
+  "Longueur, forme et architecture personnalisées.": "Longueur, forme et architecture personnalisées.",
+  "CRÉATIF": "CRÉATIF",
+  "Nail art": "Nail art",
+  "Minimal, French, Babyboomer ou compositions plus créatives.": "Minimal, French, Babyboomer ou compositions plus créatives.",
+  "COMBINAISONS": "COMBINAISONS",
+  "Forfaits": "Forfaits",
+  "Des options pensées pour maximiser tenue, confort et style.": "Des options pensées pour maximiser tenue, confort et style.",
+  "MENU ROCOCO": "MENU ROCOCO",
+  "Tarifs en": "Tarifs en",
+  "CAD.": "CAD.",
+  "Services personnalisables selon la longueur, la forme et le niveau de détail.": "Services personnalisables selon la longueur, la forme et le niveau de détail.",
+  "Tous": "Tous",
+  "Gel": "Gel",
+  "Pose semi-permanent": "Pose semi-permanent",
+  "Dépose semi-permanent": "Dépose semi-permanent",
+  "Dépose & pose": "Dépose & pose",
+  "Pose d'extensions en gel": "Pose d’extensions en gel",
+  "Gainage": "Gainage",
+  "Remplissage 4 semaines": "Remplissage 4 semaines",
+  "Dépose gel": "Dépose gel",
+  "Nail art · par ongle": "Nail art · par ongle",
+  "French ou Babyboomer": "French ou Babyboomer",
+  "Nail art complet": "Nail art complet",
+  "Sur devis": "Sur devis",
+  "Gainage + semi-permanent": "Gainage + semi-permanent",
+  "Pose XXL": "Pose XXL",
+  "Pose semi-permanent + gainage": "Pose semi-permanent + gainage",
+  "OFFRE DÉCOUVERTE": "OFFRE DÉCOUVERTE",
+  "-25% pour votre première visite.": "-25% pour votre première visite.",
+  "CLIENT WORK / INSPIRATION": "RÉALISATIONS / INSPIRATION",
+  "Des détails qui": "Des détails qui",
+  "se remarquent.": "se remarquent.",
+  "Cette galerie est prête à accueillir vos vraies photos clientes. Pour l'instant, elle utilise des visuels de démonstration externes.": "Cette galerie est prête à accueillir vos vraies photos clientes. Pour l’instant, elle utilise des visuels de démonstration externes.",
+  "Nude / Clean": "Nude / Clean",
+  "Minimal Art": "Art minimal",
+  "Color Story": "Palette couleur",
+  "Signature": "Signature",
+  "THE ROCOCO EFFECT": "L’EFFET ROCOCO",
+  "YOUR": "VOS",
+  "but": "mais",
+  "BOLDER.": "PLUS AUDACIEUX.",
+  "Une signature pensée pour être remarquée sans jamais perdre son élégance.": "Une signature pensée pour être remarquée sans jamais perdre son élégance.",
+  "FIDÉLITÉ": "FIDÉLITÉ",
+  "FIDÉLITÉ ROCOCO": "FIDÉLITÉ ROCOCO",
+  "Votre 8e manucure.": "Votre 8e manucure.",
+  "Notre cadeau.": "Notre cadeau.",
+  "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez vos visites et profitez de votre récompense lors de votre huitième manucure.": "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez vos visites et profitez de votre récompense lors de votre huitième manucure.",
+  "visites.": "visites.",
+  "La prochaine est pour nous. ✦": "La prochaine est pour nous. ✦",
+  "OFFERTE": "OFFERTE",
+  "MANUCURE ROCOCO": "MANUCURE ROCOCO",
+  "PRODUITS": "PRODUITS",
+  "De haute qualité": "De haute qualité",
+  "HYGIÈNE": "HYGIÈNE",
+  "Irréprochable": "Irréprochable",
+  "TECHNICIENNES": "TECHNICIENNES",
+  "Expertes": "Expertes",
+  "EXPÉRIENCE": "EXPÉRIENCE",
+  "Personnalisée": "Personnalisée",
+  "RÉSULTATS": "RÉSULTATS",
+  "Durables": "Durables",
+  "MOTS DE NOS CLIENTES": "MOTS DE NOS CLIENTES",
+  "Modern.": "Moderne.",
+  "Personal.": "Personnelle.",
+  "ROCOCO.": "ROCOCO.",
+  "EXPÉRIENCE ROCOCO": "EXPÉRIENCE ROCOCO",
+  "Exemples de présentation — à remplacer par des avis vérifiés.": "Exemples de présentation — à remplacer par des avis vérifiés.",
+  "“Une finition propre, élégante et exactement comme je l’imaginais.”": "« Une finition propre, élégante et exactement comme je l’imaginais. »",
+  "Cliente ROCOCO": "Cliente ROCOCO",
+  "“J’adore l’attention portée aux détails. Le résultat est magnifique.”": "« J’adore l’attention portée aux détails. Le résultat est magnifique. »",
+  "“Mon inspiration a été adaptée parfaitement à mon style.”": "« Mon inspiration a été adaptée parfaitement à mon style. »",
+  "“Une expérience douce, professionnelle et une finition impeccable.”": "« Une expérience douce, professionnelle et une finition impeccable. »",
+  "BOOK YOUR SET": "RÉSERVEZ VOTRE POSE",
+  "Prête pour votre": "Prête pour votre",
+  "prochain look?": "prochain look?",
+  "Envoyez votre demande et indiquez le service, la date souhaitée et le style recherché.": "Envoyez votre demande et indiquez le service, la date souhaitée et le style recherché.",
+  "EMAIL": "COURRIEL",
+  "ZONE": "ZONE",
+  "Québec · Canada": "Québec · Canada",
+  "Nom": "Nom",
+  "Courriel": "Courriel",
+  "Service": "Service",
+  "Choisir un service": "Choisir un service",
+  "Pose semi-permanent — 30 $": "Pose semi-permanent — 30 $",
+  "Dépose & pose — 35 $": "Dépose & pose — 35 $",
+  "Extensions gel — 45 $": "Extensions gel — 45 $",
+  "Gainage — 35 $": "Gainage — 35 $",
+  "Forfait": "Forfait",
+  "Date souhaitée": "Date souhaitée",
+  "Détails / inspiration": "Détails / inspiration",
+  "Envoyer ma demande": "Envoyer ma demande",
+  "ONGLES · RAFFINEMENT & ÉLÉGANCE": "ONGLES · RAFFINEMENT & ÉLÉGANCE",
+  "Prendre rendez-vous": "Prendre rendez-vous",
+  "Retour en haut": "Retour en haut",
+  "Avis précédent": "Avis précédent",
+  "Avis suivant": "Avis suivant",
+  "Sélection de la langue": "Sélection de la langue",
+  "Portrait de membre de l'équipe ROCOCO": "Portrait d’un membre de l’équipe ROCOCO",
+  "Emblème ROCOCO": "Emblème ROCOCO",
+  "Emblème botanique ROCOCO": "Emblème botanique ROCOCO",
+  "Logo ROCOCO": "Logo ROCOCO",
+  "Manucure rose": "Manucure rose",
+  "Nail art élégant": "Nail art élégant",
+  "Ongles colorés": "Ongles colorés",
+  "Manucure détaillée": "Manucure détaillée",
+  "Couleur, longueur, design, disponibilité…": "Couleur, longueur, design, disponibilité…"
+},
+  en: {
+  "Aller au contenu": "Skip to content",
+  "ROCOCO · ONGLERIE MODERNE": "ROCOCO · MODERN NAIL STUDIO",
+  "-25% NOUVELLES CLIENTES · 8E MANUCURE OFFERTE": "-25% NEW CLIENTS · 8TH MANICURE FREE",
+  "ONGLES": "NAILS",
+  "Services": "Services",
+  "Tarifs": "Pricing",
+  "Réalisations": "Our work",
+  "Fidélité": "Loyalty",
+  "Contact": "Contact",
+  "Réserver": "Book",
+  "ROCOCO · ONGLERIE": "ROCOCO · NAIL STUDIO",
+  "RAFFINEMENT & ÉLÉGANCE": "REFINEMENT & ELEGANCE",
+  "Bold": "Bold",
+  "nails.": "nails.",
+  "Soft luxury.": "Soft luxury.",
+  "ROCOCO transforme chaque rendez-vous en expérience esthétique : lignes précises, détails raffinés, palettes soignées et finitions élégantes.": "ROCOCO turns every appointment into a beauty experience: precise lines, refined details, curated colours and elegant finishes.",
+  "Réserver ma séance": "Book my appointment",
+  "Voir les réalisations": "See our work",
+  "SEMI-PERMANENT": "GEL POLISH",
+  "EXTENSIONS GEL": "GEL EXTENSIONS",
+  "NAIL ART": "NAIL ART",
+  "ROCOCO · SIGNATURE": "ROCOCO · SIGNATURE",
+  "SIGNATURE": "SIGNATURE",
+  "NAILS": "NAILS",
+  "THE ROCOCO SET": "THE ROCOCO SET",
+  "signature beauty": "signature beauty",
+  "MONTRÉAL": "MONTREAL",
+  "GEL": "GEL",
+  "L'IDENTITÉ ROCOCO": "THE ROCOCO IDENTITY",
+  "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.": "An identity inspired by ornament, femininity and detail — translated into a contemporary digital experience.",
+  "Founder & CEO": "FOUNDER & CEO",
+  "Nail Artist": "Nail Artist",
+  "THE ROCOCO SIGNATURE": "THE ROCOCO SIGNATURE",
+  "More than a logo.": "More than a logo.",
+  "A visual signature.": "A visual signature.",
+  "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.": "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.",
+  "NOS ESSENTIELS": "OUR ESSENTIALS",
+  "Un service précis.": "Precise service.",
+  "Une esthétique assumée.": "A confident aesthetic.",
+  "Chaque prestation est pensée pour créer une finition nette, moderne et harmonieuse, adaptée à votre style.": "Every service is designed to create a clean, modern and harmonious finish tailored to your style.",
+  "CLASSIQUE MODERNE": "MODERN CLASSIC",
+  "Semi-permanent": "Gel polish",
+  "Couleur uniforme, brillance longue durée et finition impeccable.": "Even colour, long-lasting shine and an impeccable finish.",
+  "Découvrir": "Discover",
+  "STRUCTURE": "STRUCTURE",
+  "Extensions gel": "Gel extensions",
+  "Longueur, forme et architecture personnalisées.": "Custom length, shape and structure.",
+  "CRÉATIF": "CREATIVE",
+  "Nail art": "Nail art",
+  "Minimal, French, Babyboomer ou compositions plus créatives.": "Minimal designs, French tips, Babyboomer or more creative compositions.",
+  "COMBINAISONS": "COMBINATIONS",
+  "Forfaits": "Packages",
+  "Des options pensées pour maximiser tenue, confort et style.": "Options designed to maximize wear, comfort and style.",
+  "MENU ROCOCO": "ROCOCO MENU",
+  "Tarifs en": "Pricing in",
+  "CAD.": "CAD.",
+  "Services personnalisables selon la longueur, la forme et le niveau de détail.": "Services can be customized according to length, shape and level of detail.",
+  "Tous": "All",
+  "Gel": "Gel",
+  "Pose semi-permanent": "Gel polish application",
+  "Dépose semi-permanent": "Gel polish removal",
+  "Dépose & pose": "Removal & application",
+  "Pose d'extensions en gel": "Gel extension set",
+  "Gainage": "Builder gel overlay",
+  "Remplissage 4 semaines": "4-week refill",
+  "Dépose gel": "Gel removal",
+  "Nail art · par ongle": "Nail art · per nail",
+  "French ou Babyboomer": "French or Babyboomer",
+  "Nail art complet": "Full nail art",
+  "Sur devis": "By quote",
+  "Gainage + semi-permanent": "Builder gel + gel polish",
+  "Pose XXL": "XXL length",
+  "Pose semi-permanent + gainage": "Gel polish + builder gel",
+  "OFFRE DÉCOUVERTE": "WELCOME OFFER",
+  "-25% pour votre première visite.": "-25% on your first visit.",
+  "CLIENT WORK / INSPIRATION": "CLIENT WORK / INSPIRATION",
+  "Des détails qui": "Details that",
+  "se remarquent.": "get noticed.",
+  "Cette galerie est prête à accueillir vos vraies photos clientes. Pour l'instant, elle utilise des visuels de démonstration externes.": "This gallery is ready for real client photos. For now, it uses external demonstration visuals.",
+  "Nude / Clean": "Nude / Clean",
+  "Minimal Art": "Minimal Art",
+  "Color Story": "Colour Story",
+  "Signature": "Signature",
+  "THE ROCOCO EFFECT": "THE ROCOCO EFFECT",
+  "YOUR": "YOUR",
+  "but": "but",
+  "BOLDER.": "BOLDER.",
+  "Une signature pensée pour être remarquée sans jamais perdre son élégance.": "A signature designed to be noticed without ever losing its elegance.",
+  "FIDÉLITÉ": "LOYALTY",
+  "FIDÉLITÉ ROCOCO": "ROCOCO LOYALTY",
+  "Votre 8e manucure.": "Your 8th manicure.",
+  "Notre cadeau.": "Our gift.",
+  "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez vos visites et profitez de votre récompense lors de votre huitième manucure.": "Because your loyalty deserves its own ROCOCO moment. Collect your visits and enjoy your reward on your eighth manicure.",
+  "visites.": "visits.",
+  "La prochaine est pour nous. ✦": "The next one is on us. ✦",
+  "OFFERTE": "FREE",
+  "MANUCURE ROCOCO": "ROCOCO MANICURE",
+  "PRODUITS": "PRODUCTS",
+  "De haute qualité": "High quality",
+  "HYGIÈNE": "HYGIENE",
+  "Irréprochable": "Impeccable",
+  "TECHNICIENNES": "TECHNICIANS",
+  "Expertes": "Experts",
+  "EXPÉRIENCE": "EXPERIENCE",
+  "Personnalisée": "Personalized",
+  "RÉSULTATS": "RESULTS",
+  "Durables": "Long-lasting",
+  "MOTS DE NOS CLIENTES": "CLIENT LOVE",
+  "Modern.": "Modern.",
+  "Personal.": "Personal.",
+  "ROCOCO.": "ROCOCO.",
+  "EXPÉRIENCE ROCOCO": "ROCOCO EXPERIENCE",
+  "Exemples de présentation — à remplacer par des avis vérifiés.": "Presentation examples — replace with verified client reviews.",
+  "“Une finition propre, élégante et exactement comme je l’imaginais.”": "“A clean, elegant finish — exactly how I imagined it.”",
+  "Cliente ROCOCO": "ROCOCO Client",
+  "“J’adore l’attention portée aux détails. Le résultat est magnifique.”": "“I love the attention to detail. The result is beautiful.”",
+  "“Mon inspiration a été adaptée parfaitement à mon style.”": "“My inspiration was adapted perfectly to my style.”",
+  "“Une expérience douce, professionnelle et une finition impeccable.”": "“A gentle, professional experience with an impeccable finish.”",
+  "BOOK YOUR SET": "BOOK YOUR SET",
+  "Prête pour votre": "Ready for your",
+  "prochain look?": "next look?",
+  "Envoyez votre demande et indiquez le service, la date souhaitée et le style recherché.": "Send your request and tell us the service, preferred date and style you have in mind.",
+  "EMAIL": "EMAIL",
+  "ZONE": "AREA",
+  "Québec · Canada": "Quebec · Canada",
+  "Nom": "Name",
+  "Courriel": "Email",
+  "Service": "Service",
+  "Choisir un service": "Choose a service",
+  "Pose semi-permanent — 30 $": "Gel polish application — $30",
+  "Dépose & pose — 35 $": "Removal & application — $35",
+  "Extensions gel — 45 $": "Gel extensions — $45",
+  "Gainage — 35 $": "Builder gel overlay — $35",
+  "Forfait": "Package",
+  "Date souhaitée": "Preferred date",
+  "Détails / inspiration": "Details / inspiration",
+  "Envoyer ma demande": "Send my request",
+  "ONGLES · RAFFINEMENT & ÉLÉGANCE": "NAILS · REFINEMENT & ELEGANCE",
+  "Prendre rendez-vous": "Book an appointment",
+  "Retour en haut": "Back to top",
+  "Avis précédent": "Previous review",
+  "Avis suivant": "Next review",
+  "Sélection de la langue": "Language selection",
+  "Portrait de membre de l'équipe ROCOCO": "Portrait of a ROCOCO team member",
+  "Emblème ROCOCO": "ROCOCO emblem",
+  "Emblème botanique ROCOCO": "ROCOCO botanical emblem",
+  "Logo ROCOCO": "ROCOCO logo",
+  "Manucure rose": "Pink manicure",
+  "Nail art élégant": "Elegant nail art",
+  "Ongles colorés": "Colourful nails",
+  "Manucure détaillée": "Detailed manicure",
+  "Couleur, longueur, design, disponibilité…": "Colour, length, design, availability…"
+}
+};
+
+const ROCOCO_META = {
+  fr: {
+    lang: "fr-CA",
+    title: "ROCOCO — Studio d’ongles",
+    description: "ROCOCO — Studio d’ongles moderne et raffiné au Québec. Semi-permanent, extensions gel, nail art, gainage et forfaits.",
+    socialDescription: "Raffinement, élégance et nail art moderne au Québec."
+  },
+  en: {
+    lang: "en-CA",
+    title: "ROCOCO — Modern Nail Studio",
+    description: "ROCOCO — A modern and refined nail studio in Quebec. Gel polish, gel extensions, nail art, builder gel and packages.",
+    socialDescription: "Refinement, elegance and modern nail art in Quebec."
+  }
+};
+
+function initRococoLanguage() {
+  const storageKey = "rococo-language";
+  const normalize = value => (value || "").replace(/\s+/g, " ").trim();
+
+  const buttons = [...document.querySelectorAll(".language-option")];
+  if (!buttons.length) return;
+
+  // Store all translatable text nodes ONCE, so switching back and forth
+  // never depends on the currently displayed translation.
+  const walker = document.createTreeWalker(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode(node) {
+        const parent = node.parentElement;
+        if (!parent || ["SCRIPT", "STYLE", "NOSCRIPT"].includes(parent.tagName)) {
+          return NodeFilter.FILTER_REJECT;
+        }
+
+        const source = normalize(node.nodeValue);
+        if (!source) return NodeFilter.FILTER_REJECT;
+
+        return (ROCOCO_I18N.fr[source] !== undefined || ROCOCO_I18N.en[source] !== undefined)
+          ? NodeFilter.FILTER_ACCEPT
+          : NodeFilter.FILTER_REJECT;
+      }
+    }
+  );
+
+  const records = [];
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    records.push({
+      node,
+      source: normalize(node.nodeValue),
+      prefix: (node.nodeValue.match(/^\s*/) || [""])[0],
+      suffix: (node.nodeValue.match(/\s*$/) || [""])[0]
+    });
+  }
+
+  const attributeRecords = [];
+  document.querySelectorAll("*").forEach(el => {
+    ["placeholder", "aria-label", "alt", "title"].forEach(attribute => {
+      if (!el.hasAttribute(attribute)) return;
+      const source = normalize(el.getAttribute(attribute));
+      if (ROCOCO_I18N.fr[source] !== undefined || ROCOCO_I18N.en[source] !== undefined) {
+        attributeRecords.push({ el, attribute, source });
+      }
+    });
+  });
+
+  function updateMeta(language) {
+    const meta = ROCOCO_META[language];
+    document.documentElement.lang = meta.lang;
+    document.title = meta.title;
+
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.content = meta.description;
+
+    const ogLocale = document.querySelector('meta[property="og:locale"]');
+    if (ogLocale) ogLocale.content = language === "fr" ? "fr_CA" : "en_CA";
+
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = meta.title;
+
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) ogDescription.content = meta.socialDescription;
+
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.content = meta.title;
+
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) twitterDescription.content = meta.socialDescription;
+  }
+
+  function setLanguage(language, remember = true) {
+    language = language === "en" ? "en" : "fr";
+
+    records.forEach(record => {
+      const translated = ROCOCO_I18N[language][record.source];
+      if (translated !== undefined) {
+        record.node.nodeValue = record.prefix + translated + record.suffix;
+      }
+    });
+
+    attributeRecords.forEach(record => {
+      const translated = ROCOCO_I18N[language][record.source];
+      if (translated !== undefined) {
+        record.el.setAttribute(record.attribute, translated);
+      }
+    });
+
+    buttons.forEach(button => {
+      const active = button.dataset.language === language;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    const switcher = document.querySelector(".language-switcher");
+    if (switcher) {
+      switcher.setAttribute(
+        "aria-label",
+        language === "fr" ? "Sélection de la langue" : "Language selection"
+      );
+    }
+
+    document.body.dataset.language = language;
+    updateMeta(language);
+
+    // Review pagination dots are created dynamically, so translate their labels too.
+    document.querySelectorAll("#reviewDots button").forEach((dot, index) => {
+      dot.setAttribute(
+        "aria-label",
+        language === "fr" ? `Afficher les avis ${index + 1}` : `Show reviews ${index + 1}`
+      );
+    });
+
+    if (remember) {
+      try {
+        localStorage.setItem(storageKey, language);
+      } catch (_) {}
+    }
+
+    document.dispatchEvent(new CustomEvent("rococo:languagechange", {
+      detail: { language }
+    }));
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => setLanguage(button.dataset.language));
+  });
+
+  let savedLanguage = null;
+  try {
+    savedLanguage = localStorage.getItem(storageKey);
+  } catch (_) {}
+
+  // Quebec-first behavior:
+  // remember explicit choice; otherwise use browser language;
+  // French remains the fallback.
+  const browserLanguage = (navigator.language || "").toLowerCase();
+  const initialLanguage =
+    savedLanguage === "fr" || savedLanguage === "en"
+      ? savedLanguage
+      : browserLanguage.startsWith("en")
+        ? "en"
+        : "fr";
+
+  setLanguage(initialLanguage, false);
+
+  window.ROCOCO_LANGUAGE = {
+    get current() {
+      return document.body.dataset.language || "fr";
+    },
+    set(language) {
+      setLanguage(language);
+    }
+  };
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initRococoLanguage();
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
@@ -211,9 +704,26 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener("submit", e => {
       e.preventDefault();
       const data = new FormData(form);
-      const subject = encodeURIComponent(`Demande ROCOCO — ${data.get("service")}`);
+      const currentLang = document.body.dataset.language || "fr";
+      const subject = encodeURIComponent(
+        currentLang === "en"
+          ? `ROCOCO appointment request — ${data.get("service")}`
+          : `Demande ROCOCO — ${data.get("service")}`
+      );
       const body = encodeURIComponent(
-`Bonjour ROCOCO,
+        currentLang === "en"
+          ? `Hello ROCOCO,
+
+Name: ${data.get("name")}
+Email: ${data.get("email")}
+Service: ${data.get("service")}
+Preferred date: ${data.get("date")}
+
+Details:
+${data.get("message") || ""}
+
+Thank you!`
+          : `Bonjour ROCOCO,
 
 Nom : ${data.get("name")}
 Courriel : ${data.get("email")}
@@ -226,7 +736,11 @@ ${data.get("message") || ""}
 Merci !`
       );
       window.location.href = `mailto:onglesrococo@gmail.com?subject=${subject}&body=${body}`;
-      if (status) status.textContent = "Votre demande est prête à être envoyée.";
+      if (status) {
+        status.textContent = currentLang === "en"
+          ? "Your request is ready to be sent."
+          : "Votre demande est prête à être envoyée.";
+      }
     });
   }
 });
@@ -328,6 +842,15 @@ Merci !`
       dotsWrap.appendChild(dot);
     }
     updateDots();
+    if (window.ROCOCO_LANGUAGE) {
+      const language = window.ROCOCO_LANGUAGE.current;
+      [...dotsWrap.children].forEach((dot, index) => {
+        dot.setAttribute(
+          "aria-label",
+          language === "fr" ? `Afficher les avis ${index + 1}` : `Show reviews ${index + 1}`
+        );
+      });
+    }
   }
 
   function updateDots(){
