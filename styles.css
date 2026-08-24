@@ -1234,6 +1234,12 @@ body > *:not(.rococo-canvas):not(.cursor-dot):not(.cursor-ring):not(.cursor-orb)
   }
 }
 
+.rococo-text {
+  font-family: "PT Serif", serif;
+  font-weight: 500;
+ 
+  color: #21621c;
+}
 
 /* =========================================================
    FINAL ROCOCO VISUAL SIGNATURE — BLUSH / IVORY EDITION
