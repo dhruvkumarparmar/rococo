@@ -19,13 +19,18 @@ const ROCOCO_I18N = {
   "Réserver": "Réserver",
   "ROCOCO": "ROCOCO",
   "RAFFINEMENT & ÉLÉGANCE": "RAFFINEMENT & ÉLÉGANCE",
-  "Bold": "Audacieux",
-  "nails.": ".",
+  "Bold": "Audacieux.",
+  "nails.": "",
   "Soft luxury.": "Élégance douce.",
   "transforme chaque rendez-vous en expérience esthétique : lignes précises, détails raffinés, palettes soignées et finitions élégantes.": " transforme chaque rendez-vous en expérience esthétique : lignes précises, détails raffinés, palettes soignées et finitions élégantes.",
   "Réserver ma séance": "Réserver ma séance",
   "Voir les réalisations": "Voir les réalisations",
   "SEMI-PERMANENT": "SEMI-PERMANENT",
+  "RENFORCEMENT AU GEL": "RENFORCEMENT AU GEL",
+  "EXTENSIONS SOLIDES": "EXTENSIONS SOLIDES",
+  "MANUCURE SÈCHE": "MANUCURE SÈCHE",
+  "STYLES TENDANCE": "STYLES TENDANCE",
+  "VERNIS GEL": "VERNIS GEL",
   "EXTENSIONS GEL": "EXTENSIONS GEL",
   "NAIL ART": "NAIL ART",
   "ROCOCO · SIGNATURE": "ROCOCO · SIGNATURE",
@@ -36,13 +41,22 @@ const ROCOCO_I18N = {
   "MONTRÉAL": "MONTRÉAL",
   "GEL": "GEL",
   "L'IDENTITÉ ROCOCO": "L’IDENTITÉ ROCOCO",
-  "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.": "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.",
-  "Founder & CEO": "FONDATRICE & CEO",
+  "Une identité inspirée de la maîtrise du métier, de la féminité et du détail — traduite dans une expérience contemporaine.": "Une identité inspirée de la maîtrise du métier, de la féminité et du détail — traduite dans une expérience contemporaine.",
+  "Owner & Proprietor": "PROPRIÉTAIRE",
   "Nail Artist": "Artiste ongulaire",
-  "THE ROCOCO SIGNATURE": "LA SIGNATURE ROCOCO",
-  "More than a logo.": "Plus qu’un logo.",
-  "A visual signature.": "Une signature visuelle.",
-  "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.": "L’emblème ROCOCO devient une partie intégrante de l’expérience — il se révèle par le mouvement, la lumière et les détails superposés au fil de votre visite.",
+  "LOCALISATION & DISPONIBILITÉS": "LOCALISATION & DISPONIBILITÉS",
+  "À Laval.": "À Laval.",
+  "Ouvert tous les jours.": "Ouvert tous les jours.",
+  "LOCALISATION": "LOCALISATION",
+  "Laval, Québec · H7K 0C1": "Laval, Québec · H7K 0C1",
+  "JOURS": "JOURS",
+  "Du lundi au dimanche": "Du lundi au dimanche",
+  "HEURES": "HEURES",
+  "7 h à 19 h": "7 h à 19 h",
+  "Carte de la zone ROCOCO à Laval": "Carte de la zone ROCOCO à Laval",
+  "Zone desservie · H7K 0C1": "Zone desservie · H7K 0C1",
+  "Voir l’itinéraire": "Voir l’itinéraire",
+  "Chargement de la carte…": "Chargement de la carte…",
   "NOS ESSENTIELS": "NOS ESSENTIELS",
   "Un service précis.": "Un service précis.",
   "Une esthétique assumée.": "Une esthétique assumée.",
@@ -92,6 +106,9 @@ const ROCOCO_I18N = {
   "Color Story": "Palette couleur",
   "Signature": "Signature",
   "THE ROCOCO EFFECT": "L’EFFET ROCOCO",
+  "COLLECTION AUTOMNE": "COLLECTION AUTOMNE",
+  "ÉDITION SAISONNIÈRE": "ÉDITION SAISONNIÈRE",
+  "TAUPE · OR": "TAUPE · OR",
   "YOUR": "VOS",
   "but": "mais",
   "BOLDER.": "PLUS AUDACIEUX.",
@@ -159,7 +176,69 @@ const ROCOCO_I18N = {
   "Nail art élégant": "Nail art élégant",
   "Ongles colorés": "Ongles colorés",
   "Manucure détaillée": "Manucure détaillée",
-  "Couleur, longueur, design, disponibilité…": "Couleur, longueur, design, disponibilité…"
+  "Couleur, longueur, design, disponibilité…": "Couleur, longueur, design, disponibilité…",
+  "7E MANUCURE OFFERTE": "7E MANUCURE OFFERTE",
+  "Vernis gel": "Vernis gel",
+  "Design minimaliste, French, Babyboomer et compositions plus créatives.": "Design minimaliste, French, Babyboomer et compositions plus créatives.",
+  "Manucures": "Manucures",
+  "Extensions": "Extensions",
+  "Extras": "Extras",
+  "Autres services": "Autres services",
+  "Dépose avec manucure sèche": "Dépose avec manucure sèche",
+  "Manucure sèche avec vernis gel couleur": "Manucure sèche avec vernis gel couleur",
+  "Manucure sèche avec vernis renforcé": "Manucure sèche avec vernis renforcé",
+  "Renforcement au gel": "Renforcement au gel",
+  "Pose d’extensions": "Pose d’extensions",
+  "Remplissage": "Remplissage",
+  "Nail art complet · 10 ongles": "Nail art complet · 10 ongles",
+  "Beauté des pieds": "Beauté des pieds",
+  "Duo manucure et beauté des pieds": "Duo manucure et beauté des pieds",
+  "Dépose d’un autre salon": "Dépose d’un autre salon",
+  "Réparations": "Réparations",
+  "À partir de 40 $": "À partir de 40 $",
+  "À partir de 45 $": "À partir de 45 $",
+  "À partir de 50 $": "À partir de 50 $",
+  "55 $": "55 $",
+  "70 $": "70 $",
+  "10 $": "10 $",
+  "5 $": "5 $",
+  "20 $": "20 $",
+  "45 $": "45 $",
+  "80 $": "80 $",
+  "Gratuit": "Gratuit",
+  "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.": "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.",
+  "DE L’AUDACE": "DE L’AUDACE",
+  "JUSQU’AU": "JUSQU’AU",
+  "BOUT DES": "BOUT DES",
+  "DOIGTS": "DOIGTS",
+  "Votre 7e manucure.": "Votre 7e manucure.",
+  "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez six visites et profitez de votre récompense lors de votre septième manucure.": "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez six visites et profitez de votre récompense lors de votre septième manucure.",
+  "Avis de clientes ROCOCO.": "Avis de clientes ROCOCO.",
+  "Laval · Québec · Canada": "Laval · Québec · Canada",
+  "Téléphone": "Téléphone",
+  "Manucure sèche": "Manucure sèche",
+  "Heure souhaitée": "Heure souhaitée",
+  "Choisir une heure": "Choisir une heure",
+  "Heure": "Heure",
+  "Minutes": "Minutes",
+  "Confirmer l’heure": "Confirmer l’heure",
+  "7 h 00": "7 h 00",
+  "8 h 00": "8 h 00",
+  "9 h 00": "9 h 00",
+  "10 h 00": "10 h 00",
+  "11 h 00": "11 h 00",
+  "12 h 00": "12 h 00",
+  "13 h 00": "13 h 00",
+  "14 h 00": "14 h 00",
+  "15 h 00": "15 h 00",
+  "16 h 00": "16 h 00",
+  "17 h 00": "17 h 00",
+  "18 h 00": "18 h 00",
+  "19 h 00": "19 h 00",
+  "Manucure rouge effet cat-eye": "Manucure rouge effet cat-eye",
+  "Nail art rose et feuille d’or": "Nail art rose et feuille d’or",
+  "Nail art bleu et floral": "Nail art bleu et floral",
+  "Manucure French classique": "Manucure French classique"
 },
   en: {
   "Aller au contenu": "Skip to content",
@@ -181,6 +260,11 @@ const ROCOCO_I18N = {
   "Réserver ma séance": "Book my appointment",
   "Voir les réalisations": "See our work",
   "SEMI-PERMANENT": "GEL POLISH",
+  "RENFORCEMENT AU GEL": "GEL REINFORCEMENT",
+  "EXTENSIONS SOLIDES": "SOLID EXTENSIONS",
+  "MANUCURE SÈCHE": "DRY MANICURE",
+  "STYLES TENDANCE": "TRENDING STYLES",
+  "VERNIS GEL": "GEL POLISH",
   "EXTENSIONS GEL": "GEL EXTENSIONS",
   "NAIL ART": "NAIL ART",
   "ROCOCO · SIGNATURE": "ROCOCO · SIGNATURE",
@@ -191,13 +275,22 @@ const ROCOCO_I18N = {
   "VERNIS GEL": "GEL POLISH",
   "GEL": "GEL",
   "L'IDENTITÉ ROCOCO": "THE ROCOCO IDENTITY",
-  "Une identité inspirée de l’ornement, de la féminité et du détail — traduite dans une expérience digitale contemporaine.": "An identity inspired by ornament, femininity and detail — translated into a contemporary digital experience.",
-  "Founder & CEO": "FOUNDER & CEO",
+  "Une identité inspirée de la maîtrise du métier, de la féminité et du détail — traduite dans une expérience contemporaine.": "An identity inspired by professional expertise, femininity and detail — translated into a contemporary experience.",
+  "Owner & Proprietor": "OWNER & PROPRIETOR",
   "Nail Artist": "Nail Artist",
-  "THE ROCOCO SIGNATURE": "THE ROCOCO SIGNATURE",
-  "More than a logo.": "More than a logo.",
-  "A visual signature.": "A visual signature.",
-  "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.": "The ROCOCO emblem becomes part of the experience itself — appearing through movement, light and layered detail as you explore the site.",
+  "LOCALISATION & DISPONIBILITÉS": "LOCATION & AVAILABILITY",
+  "À Laval.": "In Laval.",
+  "Ouvert tous les jours.": "Open every day.",
+  "LOCALISATION": "LOCATION",
+  "Laval, Québec · H7K 0C1": "Laval, Quebec · H7K 0C1",
+  "JOURS": "DAYS",
+  "Du lundi au dimanche": "Monday to Sunday",
+  "HEURES": "HOURS",
+  "7 h à 19 h": "7 a.m. to 7 p.m.",
+  "Carte de la zone ROCOCO à Laval": "Map of the ROCOCO area in Laval",
+  "Zone desservie · H7K 0C1": "Service area · H7K 0C1",
+  "Voir l’itinéraire": "View directions",
+  "Chargement de la carte…": "Loading map…",
   "NOS ESSENTIELS": "OUR ESSENTIALS",
   "Un service précis.": "Precise service.",
   "Une esthétique assumée.": "A confident aesthetic.",
@@ -246,6 +339,9 @@ const ROCOCO_I18N = {
   "Color Story": "Colour Story",
   "Signature": "Signature",
   "THE ROCOCO EFFECT": "THE ROCOCO EFFECT",
+  "COLLECTION AUTOMNE": "FALL COLLECTION",
+  "ÉDITION SAISONNIÈRE": "SEASONAL EDITION",
+  "TAUPE · OR": "TAUPE · GOLD",
   "YOUR": "YOUR",
   "but": "but",
   "BOLDER.": "BOLDER.",
@@ -313,7 +409,69 @@ const ROCOCO_I18N = {
   "Nail art élégant": "Elegant nail art",
   "Ongles colorés": "Colourful nails",
   "Manucure détaillée": "Detailed manicure",
-  "Couleur, longueur, design, disponibilité…": "Colour, length, design, availability…"
+  "Couleur, longueur, design, disponibilité…": "Color, length, design, availability…",
+  "7E MANUCURE OFFERTE": "7TH MANICURE FREE",
+  "Vernis gel": "Gel polish",
+  "Design minimaliste, French, Babyboomer et compositions plus créatives.": "Minimalist design, French tips, Babyboomer and more creative compositions.",
+  "Manucures": "Manicures",
+  "Extensions": "Extensions",
+  "Extras": "Extras",
+  "Autres services": "Other services",
+  "Dépose avec manucure sèche": "Removal with dry manicure",
+  "Manucure sèche avec vernis gel couleur": "Dry manicure with color gel polish",
+  "Manucure sèche avec vernis renforcé": "Dry manicure with reinforced polish",
+  "Renforcement au gel": "Gel reinforcement",
+  "Pose d’extensions": "Full extension set",
+  "Remplissage": "Refill",
+  "Nail art complet · 10 ongles": "Full nail art · 10 nails",
+  "Beauté des pieds": "Pedicure",
+  "Duo manucure et beauté des pieds": "Manicure & pedicure duo",
+  "Dépose d’un autre salon": "Removal from another salon",
+  "Réparations": "Repairs",
+  "À partir de 40 $": "From $40",
+  "À partir de 45 $": "From $45",
+  "À partir de 50 $": "From $50",
+  "55 $": "$55",
+  "70 $": "$70",
+  "10 $": "$10",
+  "5 $": "$5",
+  "20 $": "$20",
+  "45 $": "$45",
+  "80 $": "$80",
+  "Gratuit": "Free",
+  "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.": "Discover a selection of ROCOCO creations, from refined classics to bolder compositions.",
+  "DE L’AUDACE": "YOUR",
+  "JUSQU’AU": "NAILS",
+  "BOUT DES": "BUT",
+  "DOIGTS": "BOLDER.",
+  "Votre 7e manucure.": "Your 7th manicure.",
+  "Parce que votre fidélité mérite aussi son moment ROCOCO. Cumulez six visites et profitez de votre récompense lors de votre septième manucure.": "Because your loyalty deserves its own ROCOCO moment. Collect six visits and enjoy your reward on your seventh manicure.",
+  "Avis de clientes ROCOCO.": "ROCOCO client reviews.",
+  "Laval · Québec · Canada": "Laval · Quebec · Canada",
+  "Téléphone": "Phone number",
+  "Manucure sèche": "Dry manicure",
+  "Heure souhaitée": "Preferred time",
+  "Choisir une heure": "Choose a time",
+  "Heure": "Hour",
+  "Minutes": "Minutes",
+  "Confirmer l’heure": "Confirm time",
+  "7 h 00": "7:00 a.m.",
+  "8 h 00": "8:00 a.m.",
+  "9 h 00": "9:00 a.m.",
+  "10 h 00": "10:00 a.m.",
+  "11 h 00": "11:00 a.m.",
+  "12 h 00": "12:00 p.m.",
+  "13 h 00": "1:00 p.m.",
+  "14 h 00": "2:00 p.m.",
+  "15 h 00": "3:00 p.m.",
+  "16 h 00": "4:00 p.m.",
+  "17 h 00": "5:00 p.m.",
+  "18 h 00": "6:00 p.m.",
+  "19 h 00": "7:00 p.m.",
+  "Manucure rouge effet cat-eye": "Red cat-eye manicure",
+  "Nail art rose et feuille d’or": "Pink and gold-leaf nail art",
+  "Nail art bleu et floral": "Blue floral nail art",
+  "Manucure French classique": "Classic French manicure"
 }
 };
 
@@ -321,13 +479,13 @@ const ROCOCO_META = {
   fr: {
     lang: "fr-CA",
     title: "ROCOCO — Studio d’ongles",
-    description: "ROCOCO — Studio d’ongles moderne et raffiné au Québec. Semi-permanent, extensions gel, nail art, gainage et forfaits.",
+    description: "ROCOCO — Studio d’ongles moderne et raffiné à Laval, Québec. Vernis gel, extensions, nail art et manucure sèche.",
     socialDescription: "Raffinement, élégance et nail art moderne au Québec."
   },
   en: {
     lang: "en-CA",
     title: "ROCOCO — Modern Nail Studio",
-    description: "ROCOCO — A modern and refined nail studio in Quebec. Gel polish, gel extensions, nail art, builder gel and packages.",
+    description: "ROCOCO — A modern and refined nail studio in Laval, Quebec. Gel polish, extensions, nail art and dry manicures.",
     socialDescription: "Refinement, elegance and modern nail art in Quebec."
   }
 };
@@ -461,7 +619,20 @@ function initRococoLanguage() {
   }
 
   buttons.forEach(button => {
-    button.addEventListener("click", () => setLanguage(button.dataset.language));
+    button.addEventListener("click", () => {
+      setLanguage(button.dataset.language);
+
+      const nav = document.getElementById("nav");
+      const isMobileMenu = window.matchMedia("(max-width: 991.98px)").matches;
+      if (nav && isMobileMenu && nav.classList.contains("show")) {
+        if (window.bootstrap?.Collapse) {
+          window.bootstrap.Collapse.getOrCreateInstance(nav).hide();
+        } else {
+          nav.classList.remove("show");
+          document.querySelector('[data-bs-target="#nav"]')?.setAttribute("aria-expanded", "false");
+        }
+      }
+    });
   });
 
   let savedLanguage = null;
@@ -543,7 +714,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const progress = document.getElementById("scrollProgress");
   const kinetic = document.querySelector(".kinetic-section");
   const kineticWords = document.querySelectorAll(".kinetic-copy span");
-  const liquidNail = document.querySelector(".liquid-nail");
+  const fallVisual = document.getElementById("fallCollectionVisual");
 
   function onScroll() {
     const max = document.documentElement.scrollHeight - window.innerHeight;
@@ -567,13 +738,19 @@ document.addEventListener("DOMContentLoaded", () => {
         word.style.opacity = .35 + p * .65;
       });
 
-      if (liquidNail) {
-        liquidNail.style.filter = `saturate(${.75 + p * .45})`;
+      if (fallVisual) {
+        fallVisual.style.setProperty("--kinetic-progress", p.toFixed(3));
       }
     }
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  const studioMap = document.getElementById("studioMap");
+  const studioMapFrame = studioMap?.closest(".studio-map-frame");
+  if (studioMap && studioMapFrame) {
+    studioMap.addEventListener("load", () => studioMapFrame.classList.add("map-loaded"), { once: true });
+  }
 
   const topBtn = document.getElementById("backToTop");
   if (topBtn) topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
@@ -616,21 +793,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const dot = document.getElementById("cursorDot");
   const ring = document.getElementById("cursorRing");
   if (dot && ring && !reducedMotion && window.matchMedia("(pointer:fine)").matches) {
-    let mx = innerWidth / 2, my = innerHeight / 2;
-    let rx = mx, ry = my;
-    window.addEventListener("pointermove", e => {
-      mx = e.clientX; my = e.clientY;
-      dot.style.left = `${mx}px`;
-      dot.style.top = `${my}px`;
-    });
+    let targetX = innerWidth / 2;
+    let targetY = innerHeight / 2;
+    let ringX = targetX;
+    let ringY = targetY;
+    let cursorFrame = 0;
+
     const animateCursor = () => {
-      rx += (mx - rx) * .16;
-      ry += (my - ry) * .16;
-      ring.style.left = `${rx}px`;
-      ring.style.top = `${ry}px`;
-      requestAnimationFrame(animateCursor);
+      ringX += (targetX - ringX) * .38;
+      ringY += (targetY - ringY) * .38;
+      ring.style.left = `${ringX}px`;
+      ring.style.top = `${ringY}px`;
+
+      if (Math.abs(targetX - ringX) > .1 || Math.abs(targetY - ringY) > .1) {
+        cursorFrame = requestAnimationFrame(animateCursor);
+      } else {
+        ringX = targetX;
+        ringY = targetY;
+        cursorFrame = 0;
+      }
     };
-    animateCursor();
+
+    window.addEventListener("pointermove", e => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+      dot.style.left = `${targetX}px`;
+      dot.style.top = `${targetY}px`;
+      if (!cursorFrame) cursorFrame = requestAnimationFrame(animateCursor);
+    });
 
     document.querySelectorAll("a,button,.work-card,.bento-card").forEach(el => {
       el.addEventListener("mouseenter", () => ring.classList.add("hover"));
@@ -697,50 +887,110 @@ document.addEventListener("DOMContentLoaded", () => {
     const today = new Date();
     const local = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
     dateInput.min = local;
+    dateInput.addEventListener("change", () => requestAnimationFrame(() => dateInput.blur()));
+  }
+
+  const timePicker = document.getElementById("customTimePicker");
+  const timeInput = document.getElementById("time");
+  const timeTrigger = document.getElementById("timePickerTrigger");
+  const timeValue = document.getElementById("timePickerValue");
+  const timePanel = document.getElementById("timePickerPanel");
+  const timeHour = document.getElementById("timeHour");
+  const timeMinute = document.getElementById("timeMinute");
+  const timeApply = document.getElementById("timePickerApply");
+
+  if (timePicker && timeInput && timeTrigger && timePanel && timeHour && timeMinute && timeApply) {
+    for (let hour = 7; hour <= 19; hour += 1) {
+      const option = document.createElement("option");
+      option.value = String(hour).padStart(2, "0");
+      option.textContent = String(hour).padStart(2, "0");
+      timeHour.appendChild(option);
+    }
+
+    const setTimePanel = open => {
+      timePanel.hidden = !open;
+      timeTrigger.setAttribute("aria-expanded", String(open));
+      timePicker.classList.toggle("open", open);
+      if (open) timeHour.focus();
+    };
+
+    timeTrigger.addEventListener("click", () => setTimePanel(timePanel.hidden));
+    timeApply.addEventListener("click", () => {
+      const selectedTime = `${timeHour.value}:${timeMinute.value}`;
+      timeInput.value = selectedTime;
+      timeValue.textContent = selectedTime;
+      timeTrigger.classList.add("has-value");
+      if (status) status.textContent = "";
+      setTimePanel(false);
+    });
+    document.addEventListener("rococo:languagechange", () => {
+      if (timeInput.value) timeValue.textContent = timeInput.value;
+    });
+    document.addEventListener("click", event => {
+      if (!timePicker.contains(event.target)) setTimePanel(false);
+    });
+    timePicker.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        setTimePanel(false);
+        timeTrigger.focus();
+      }
+    });
   }
 
   const form = document.getElementById("bookingForm");
   const status = document.getElementById("formStatus");
+  const formSubject = document.getElementById("formSubject");
   if (form) {
-    form.addEventListener("submit", e => {
+    form.addEventListener("submit", async e => {
       e.preventDefault();
-      const data = new FormData(form);
       const currentLang = document.body.dataset.language || "fr";
-      const subject = encodeURIComponent(
-        currentLang === "en"
-          ? `ROCOCO appointment request — ${data.get("service")}`
-          : `Demande ROCOCO — ${data.get("service")}`
-      );
-      const body = encodeURIComponent(
-        currentLang === "en"
-          ? `Hello ROCOCO,
-
-Name: ${data.get("name")}
-Email: ${data.get("email")}
-Service: ${data.get("service")}
-Preferred date: ${data.get("date")}
-
-Details:
-${data.get("message") || ""}
-
-Thank you!`
-          : `Bonjour ROCOCO,
-
-Nom : ${data.get("name")}
-Courriel : ${data.get("email")}
-Service : ${data.get("service")}
-Date souhaitée : ${data.get("date")}
-
-Détails :
-${data.get("message") || ""}
-
-Merci !`
-      );
-      window.location.href = `mailto:onglesrococo@gmail.com?subject=${subject}&body=${body}`;
+      if (timeInput && !timeInput.value) {
+        if (status) status.textContent = currentLang === "en" ? "Please choose a preferred time." : "Veuillez choisir une heure souhaitée.";
+        if (timePanel) {
+          timePanel.hidden = false;
+          timeTrigger?.setAttribute("aria-expanded", "true");
+          timePicker?.classList.add("open");
+          timeHour?.focus();
+        }
+        return;
+      }
+      if (formSubject) formSubject.value = currentLang === "en"
+        ? "ROCOCO | New appointment request"
+        : "ROCOCO | Nouvelle demande de rendez-vous";
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (submitButton) submitButton.disabled = true;
       if (status) {
+        status.className = "form-status sending";
         status.textContent = currentLang === "en"
-          ? "Your request is ready to be sent."
-          : "Votre demande est prête à être envoyée.";
+          ? "Sending your request…"
+          : "Envoi de votre demande…";
+      }
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form)
+        });
+        if (!response.ok) throw new Error("Form submission failed");
+        form.reset();
+        if (timeInput) timeInput.value = "";
+        if (timeValue) timeValue.textContent = currentLang === "en" ? "Choose a time" : "Choisir une heure";
+        timeTrigger?.classList.remove("has-value");
+        if (status) {
+          status.className = "form-status success";
+          status.textContent = currentLang === "en"
+            ? "Thank you! Your request was submitted. The ROCOCO team will contact you soon."
+            : "Merci! Votre demande a été envoyée. L’équipe ROCOCO communiquera bientôt avec vous.";
+        }
+      } catch (_) {
+        if (status) {
+          status.className = "form-status error";
+          status.textContent = currentLang === "en"
+            ? "We couldn’t send your request. Please email onglesrococo@gmail.com."
+            : "Nous n’avons pas pu envoyer votre demande. Écrivez-nous à onglesrococo@gmail.com.";
+        }
+      } finally {
+        if (submitButton) submitButton.disabled = false;
       }
     });
   }
