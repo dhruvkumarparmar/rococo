@@ -14,6 +14,7 @@ const ROCOCO_I18N = {
   "Services": "Services",
   "Tarifs": "Tarifs",
   "Réalisations": "Réalisations",
+  "Galerie": "Galerie",
   "Fidélité": "Fidélité",
   "Contact": "Contact",
   "Réserver": "Réserver",
@@ -137,7 +138,6 @@ const ROCOCO_I18N = {
   "Personal.": "Personnelle.",
   "ROCOCO.": "ROCOCO.",
   "EXPÉRIENCE ROCOCO": "EXPÉRIENCE ROCOCO",
-  "Exemples de présentation — à remplacer par des avis vérifiés.": "Exemples de présentation — à remplacer par des avis vérifiés.",
   "“Une finition propre, élégante et exactement comme je l’imaginais.”": "« Une finition propre, élégante et exactement comme je l’imaginais. »",
   "Cliente ROCOCO": "Cliente ROCOCO",
   "“J’adore l’attention portée aux détails. Le résultat est magnifique.”": "« J’adore l’attention portée aux détails. Le résultat est magnifique. »",
@@ -160,6 +160,7 @@ const ROCOCO_I18N = {
   "Gainage — 35 $": "Gainage — 35 $",
   "Forfait": "Forfait",
   "Date souhaitée": "Date souhaitée",
+  "Choisir une date": "Choisir une date",
   "Détails / inspiration": "Détails / inspiration",
   "Envoyer ma demande": "Envoyer ma demande",
   "ONGLES · RAFFINEMENT & ÉLÉGANCE": "ONGLES · RAFFINEMENT & ÉLÉGANCE",
@@ -207,6 +208,9 @@ const ROCOCO_I18N = {
   "80 $": "80 $",
   "Gratuit": "Gratuit",
   "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.": "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.",
+  "Voir toute la galerie": "Voir toute la galerie",
+  "Voir plus de photos": "Voir plus de photos",
+  "Explorer la galerie complète": "Explorer la galerie complète",
   "DE L’AUDACE": "DE L’AUDACE",
   "JUSQU’AU": "JUSQU’AU",
   "BOUT DES": "BOUT DES",
@@ -248,6 +252,7 @@ const ROCOCO_I18N = {
   "Services": "Services",
   "Tarifs": "Pricing",
   "Réalisations": "Our work",
+  "Galerie": "Gallery",
   "Fidélité": "Loyalty",
   "Contact": "Contact",
   "Réserver": "Book",
@@ -370,7 +375,6 @@ const ROCOCO_I18N = {
   "Personal.": "Personal.",
   "ROCOCO.": "ROCOCO.",
   "EXPÉRIENCE ROCOCO": "ROCOCO EXPERIENCE",
-  "Exemples de présentation — à remplacer par des avis vérifiés.": "Presentation examples — replace with verified client reviews.",
   "“Une finition propre, élégante et exactement comme je l’imaginais.”": "“A clean, elegant finish — exactly how I imagined it.”",
   "Cliente ROCOCO": "ROCOCO Client",
   "“J’adore l’attention portée aux détails. Le résultat est magnifique.”": "“I love the attention to detail. The result is beautiful.”",
@@ -393,6 +397,7 @@ const ROCOCO_I18N = {
   "Gainage — 35 $": "Builder gel overlay — $35",
   "Forfait": "Package",
   "Date souhaitée": "Preferred date",
+  "Choisir une date": "Choose a date",
   "Détails / inspiration": "Details / inspiration",
   "Envoyer ma demande": "Send my request",
   "ONGLES · RAFFINEMENT & ÉLÉGANCE": "NAILS · REFINEMENT & ELEGANCE",
@@ -440,6 +445,9 @@ const ROCOCO_I18N = {
   "80 $": "$80",
   "Gratuit": "Free",
   "Découvrez quelques créations ROCOCO, du classique raffiné aux compositions les plus audacieuses.": "Discover a selection of ROCOCO creations, from refined classics to bolder compositions.",
+  "Voir toute la galerie": "View full gallery",
+  "Voir plus de photos": "View more photos",
+  "Explorer la galerie complète": "Explore the full gallery",
   "DE L’AUDACE": "YOUR",
   "JUSQU’AU": "NAILS",
   "BOUT DES": "BUT",
@@ -598,6 +606,7 @@ function initRococoLanguage() {
 
     document.body.dataset.language = language;
     updateMeta(language);
+    document.dispatchEvent(new CustomEvent("rococo:language-changed", { detail: { language } }));
 
     // Review pagination dots are created dynamically, so translate their labels too.
     document.querySelectorAll("#reviewDots button").forEach((dot, index) => {
@@ -688,16 +697,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Price filters
   const filters = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll(".price-item");
   filters.forEach(btn => {
     btn.addEventListener("click", () => {
       filters.forEach(x => x.classList.remove("active"));
       btn.classList.add("active");
       const filter = btn.dataset.filter;
-      items.forEach(item => {
+      document.querySelectorAll(".price-item").forEach(item => {
         item.style.display = (filter === "all" || item.dataset.category === filter) ? "grid" : "none";
       });
     });
+  });
+  document.addEventListener("rococo:services-rendered", () => {
+    const activeFilter = document.querySelector(".filter-btn.active");
+    if (activeFilter) activeFilter.click();
   });
 
   // Navigation
@@ -883,11 +895,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Booking
   const dateInput = document.getElementById("date");
+  const dateControl = document.getElementById("dateControl");
+  const dateDisplay = document.getElementById("dateDisplay");
   if (dateInput) {
     const today = new Date();
     const local = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split("T")[0];
     dateInput.min = local;
-    dateInput.addEventListener("change", () => requestAnimationFrame(() => dateInput.blur()));
+    const updateDateDisplay = () => {
+      const language = document.body.dataset.language === "en" ? "en" : "fr";
+      if (!dateInput.value) {
+        dateDisplay.textContent = language === "en" ? "Choose a date" : "Choisir une date";
+        dateControl.classList.remove("has-value");
+        return;
+      }
+      const [year, month, day] = dateInput.value.split("-").map(Number);
+      const chosenDate = new Date(year, month - 1, day);
+      dateDisplay.textContent = new Intl.DateTimeFormat(language === "en" ? "en-CA" : "fr-CA", {
+        weekday: "short", year: "numeric", month: "short", day: "numeric"
+      }).format(chosenDate);
+      dateControl.classList.add("has-value");
+    };
+    dateInput.addEventListener("change", () => {
+      updateDateDisplay();
+      requestAnimationFrame(() => dateInput.blur());
+    });
+    document.addEventListener("rococo:languagechange", updateDateDisplay);
+    updateDateDisplay();
   }
 
   const timePicker = document.getElementById("customTimePicker");

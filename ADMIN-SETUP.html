@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#21621c">
+  <title>ROCOCO — Activation du tableau de bord</title>
+  <link rel="icon" type="image/png" href="assets/rococo-emblem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="setup-page">
+  <main class="setup-guide">
+    <header class="setup-guide-head">
+      <a href="admin.html" class="setup-back">← Retour au tableau de bord</a>
+      <img src="assets/rococo-emblem.png" alt="ROCOCO">
+      <p class="eyebrow">ACTIVATION DU TABLEAU DE BORD</p>
+      <h1>Connecter ROCOCO à <em>Supabase</em></h1>
+      <p>Cette configuration se fait une seule fois. Elle active la connexion sécurisée, les photos et les tarifs modifiables.</p>
+    </header>
+
+    <section class="setup-steps">
+      <article><span>01</span><div><h2>Créer le projet</h2><p>Ouvrez Supabase et créez un nouveau projet gratuit pour ROCOCO.</p><a href="https://supabase.com/dashboard" target="_blank" rel="noopener noreferrer">Ouvrir Supabase ↗</a></div></article>
+      <article><span>02</span><div><h2>Préparer la base de données</h2><p>Dans Supabase, ouvrez <strong>SQL Editor</strong>. Copiez tout le contenu du fichier <code>supabase-setup.sql</code>, collez-le dans l’éditeur, puis cliquez sur <strong>Run</strong>.</p><a href="supabase-setup.sql" download>Télécharger le fichier SQL ↓</a></div></article>
+      <article><span>03</span><div><h2>Créer le compte propriétaire</h2><p>Ouvrez <strong>Authentication → Users → Add user</strong>. Utilisez <code>onglesrococo@gmail.com</code> et choisissez un nouveau mot de passe privé.</p><p class="setup-warning">N’utilisez pas un mot de passe déjà partagé dans un message ou placé dans le code du site.</p></div></article>
+      <article><span>04</span><div><h2>Copier les informations publiques</h2><p>Ouvrez <strong>Project Settings → Data API</strong>, puis copiez le <strong>Project URL</strong> et la <strong>Publishable key</strong>, parfois appelée clé <code>anon</code>.</p></div></article>
+      <article><span>05</span><div><h2>Connecter le site</h2><p>Ouvrez <code>supabase-config.js</code> et remplacez les deux valeurs commençant par <code>PASTE_</code>. N’utilisez jamais la clé <code>service_role</code>.</p></div></article>
+      <article><span>06</span><div><h2>Publier et se connecter</h2><p>Envoyez les fichiers mis à jour vers GitHub, puis ouvrez le tableau de bord ROCOCO.</p><a href="admin.html">Accéder au tableau de bord →</a></div></article>
+    </section>
+
+    <footer class="setup-guide-footer"><strong>Protection incluse</strong><p>Les visiteurs peuvent voir le contenu publié, mais seul le compte ROCOCO authentifié peut ajouter, modifier ou supprimer les photos et les tarifs.</p></footer>
+  </main>
+</body>
+</html>

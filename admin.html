@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#21621c">
+  <title>ROCOCO — Connexion</title><link rel="icon" type="image/png" href="assets/rococo-emblem.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="admin.css">
+</head>
+<body><main class="admin-shell">
+  <section id="setupState" class="setup-state" hidden><img src="assets/rococo-emblem.png" alt="ROCOCO"><p class="eyebrow">CONFIGURATION REQUISE</p><h1>Connecter le gestionnaire</h1><p>Ajoutez l’URL et la clé publique de votre projet Supabase dans <strong>supabase-config.js</strong>, puis rechargez cette page.</p><a href="ADMIN-SETUP.html">Ouvrir les instructions</a></section>
+  <section id="loginView" class="login-view" hidden><div class="login-art" aria-hidden="true"><img src="assets/rococo-emblem.png" alt=""></div><form id="loginForm" class="login-card"><p class="eyebrow">ESPACE PROPRIÉTAIRE</p><h1>Bienvenue chez <em>ROCOCO</em></h1><p>Connectez-vous pour gérer les réalisations, les collections saisonnières et les tarifs.</p><label>Courriel<input id="loginEmail" type="email" autocomplete="username" required></label><label>Mot de passe<input id="loginPassword" type="password" autocomplete="current-password" required></label><button type="submit">Se connecter</button><p id="loginMessage" class="form-message" role="status"></p></form></section>
+</main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script></body>
+</html>

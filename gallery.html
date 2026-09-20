@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galerie des créations ongulaires ROCOCO à Laval, Québec.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#21621c">
+  <link rel="icon" type="image/png" href="assets/rococo-emblem.png">
+  <title>Galerie ROCOCO — Créations ongulaires</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="gallery-page" data-language="fr">
+<a class="skip-link" href="#galleryMain" data-fr="Aller à la galerie" data-en="Skip to gallery">Aller à la galerie</a>
+
+<div class="topline">
+  <div class="container d-flex justify-content-between align-items-center gap-3">
+    <span data-fr="ROCOCO · ONGLERIE MODERNE" data-en="ROCOCO · MODERN NAIL STUDIO">ROCOCO · ONGLERIE MODERNE</span>
+    <span class="d-none d-md-inline" data-fr="LAVAL · QUÉBEC" data-en="LAVAL · QUEBEC">LAVAL · QUÉBEC</span>
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg rococo-nav sticky-top" aria-label="Navigation principale">
+  <div class="container">
+    <a href="index.html" class="navbar-brand logo-wrap brand-lockup-nav" aria-label="ROCOCO accueil">
+      <span class="nav-emblem-shell">
+        <span class="nav-emblem-halo"></span>
+        <img class="brand-emblem brand-emblem-nav" src="assets/rococo-emblem.png" alt="">
+      </span>
+      <span class="brand-lockup-text"><span class="logo">ROCOCO</span></span>
+    </a>
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#galleryNav" aria-controls="galleryNav" aria-expanded="false" aria-label="Ouvrir le menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="galleryNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li><a class="nav-link" href="index.html#services" data-fr="Services" data-en="Services">Services</a></li>
+        <li><a class="nav-link" href="index.html#tarifs" data-fr="Tarifs" data-en="Pricing">Tarifs</a></li>
+        <li><a class="nav-link active" href="gallery.html" aria-current="page" data-fr="Galerie" data-en="Gallery">Galerie</a></li>
+        <li><a class="nav-link" href="index.html#contact" data-fr="Contact" data-en="Contact">Contact</a></li>
+        <li class="nav-item language-nav-item ms-lg-2 mt-3 mt-lg-0">
+          <div class="language-switcher" role="group" aria-label="Sélection de la langue">
+            <button class="language-option active" type="button" data-gallery-language="fr" aria-pressed="true">FR</button>
+            <span class="language-divider" aria-hidden="true"></span>
+            <button class="language-option" type="button" data-gallery-language="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+        <li class="ms-lg-2 mt-3 mt-lg-0">
+          <a class="btn pill-btn" href="index.html#reservation"><span data-fr="Réserver" data-en="Book">Réserver</span><svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M6 3h7v7"></path></svg></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="galleryMain">
+  <header class="gallery-hero">
+    <div class="gallery-hero-orb gallery-hero-orb-a" aria-hidden="true"></div>
+    <div class="gallery-hero-orb gallery-hero-orb-b" aria-hidden="true"></div>
+    <div class="container gallery-back-wrap">
+      <a class="gallery-back" href="index.html">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16 10H4M9 5l-5 5 5 5"></path></svg>
+        <span data-fr="Retour au site principal" data-en="Back to main website">Retour au site principal</span>
+      </a>
+    </div>
+    <div class="container gallery-hero-inner">
+      <div>
+        <p class="mini-label" data-fr="LES CRÉATIONS ROCOCO" data-en="ROCOCO CREATIONS">LES CRÉATIONS ROCOCO</p>
+        <h1><span data-fr="La galerie" data-en="The gallery">La galerie</span><em>ROCOCO.</em></h1>
+      </div>
+      <div class="gallery-intro">
+        <p data-fr="Des poses réalisées avec précision, pensées pour chaque personnalité." data-en="Precisely crafted sets, designed for every personality.">Des poses réalisées avec précision, pensées pour chaque personnalité.</p>
+        <span><b id="galleryCount">04</b> <span data-fr="CRÉATIONS" data-en="CREATIONS">CRÉATIONS</span></span>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery-showcase" aria-labelledby="galleryHeading">
+    <div class="container">
+      <div class="gallery-heading-row">
+        <div>
+          <p class="mini-label" data-fr="INSPIRATION / CLIENTES" data-en="INSPIRATION / CLIENTS">INSPIRATION / CLIENTES</p>
+          <h2 id="galleryHeading" data-fr="Chaque détail compte." data-en="Every detail matters.">Chaque détail compte.</h2>
+        </div>
+        <p data-fr="Touchez une création pour la voir en grand." data-en="Tap a creation to view it full size.">Touchez une création pour la voir en grand.</p>
+      </div>
+
+      <div id="fullGallery" class="rococo-gallery-grid" aria-live="polite">
+        <button class="gallery-tile tile-tall" type="button" data-image="assets/gallery-cat-eye.jpg" data-title-fr="Cat-Eye Rouge" data-title-en="Red Cat-Eye">
+          <img src="assets/gallery-cat-eye.jpg" alt="Manucure rouge effet cat-eye" loading="eager">
+          <span><small>01</small><strong>Cat-Eye Rouge</strong></span>
+        </button>
+        <button class="gallery-tile" type="button" data-image="assets/gallery-pink-gold.jpg" data-title-fr="Rose & Or" data-title-en="Pink & Gold">
+          <img src="assets/gallery-pink-gold.jpg" alt="Nail art rose et or" loading="eager">
+          <span><small>02</small><strong>Rose &amp; Or</strong></span>
+        </button>
+        <button class="gallery-tile tile-wide" type="button" data-image="assets/gallery-blue-floral.jpg" data-title-fr="Floral Bleu" data-title-en="Blue Floral">
+          <img src="assets/gallery-blue-floral.jpg" alt="Nail art bleu et floral" loading="lazy">
+          <span><small>03</small><strong>Floral Bleu</strong></span>
+        </button>
+        <button class="gallery-tile" type="button" data-image="assets/gallery-french.jpg" data-title-fr="French Signature" data-title-en="Signature French">
+          <img src="assets/gallery-french.jpg" alt="Manucure French classique" loading="lazy">
+          <span><small>04</small><strong>French Signature</strong></span>
+        </button>
+      </div>
+
+      <div class="gallery-cta">
+        <img src="assets/rococo-emblem.png" alt="" aria-hidden="true">
+        <div>
+          <p class="mini-label">ROCOCO · LAVAL</p>
+          <h2 data-fr="Votre prochaine inspiration devient votre prochaine pose." data-en="Your next inspiration becomes your next set.">Votre prochaine inspiration devient votre prochaine pose.</h2>
+        </div>
+        <a class="pill-btn" href="index.html#reservation"><span data-fr="Prendre rendez-vous" data-en="Book an appointment">Prendre rendez-vous</span><svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M6 3h7v7"></path></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="gallery-footer">
+  <div class="container">
+    <a href="index.html" class="gallery-footer-brand"><img src="assets/rococo-emblem.png" alt=""><span>ROCOCO<small data-fr="RAFFINEMENT & ÉLÉGANCE" data-en="REFINEMENT & ELEGANCE">RAFFINEMENT &amp; ÉLÉGANCE</small></span></a>
+    <p>© <span id="galleryYear"></span> ROCOCO · Laval, Québec, Canada</p>
+    <a href="https://www.instagram.com/ongles.rococo/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+  </div>
+</footer>
+
+<dialog id="galleryLightbox" class="gallery-lightbox" aria-labelledby="lightboxTitle">
+  <button id="closeLightbox" class="lightbox-close" type="button" aria-label="Fermer">×</button>
+  <button id="previousImage" class="lightbox-nav lightbox-prev" type="button" aria-label="Image précédente">‹</button>
+  <figure>
+    <img id="lightboxImage" src="" alt="">
+    <figcaption><span id="lightboxIndex">01 / 04</span><strong id="lightboxTitle"></strong></figcaption>
+  </figure>
+  <button id="nextImage" class="lightbox-nav lightbox-next" type="button" aria-label="Image suivante">›</button>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
